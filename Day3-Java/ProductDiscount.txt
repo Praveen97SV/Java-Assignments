@@ -1,0 +1,22 @@
+package Day3;
+import java.util.Scanner;
+public class DiscountProducts {
+	public static void main(String[]args){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter price of product 1:");
+		int product1 = sc.nextInt();
+		System.out.println("Enter price of product 2:");
+		int product2 = sc.nextInt();
+		System.out.println("Enter price of product 3:");
+		int product3 = sc.nextInt();
+		int sum=product1+product2+product3;
+		System.out.println("Total price:"+sum);
+		double Discount1=sum-(sum*0.2);
+		System.out.println("Discounted price after 20%:"+Discount1);
+		System.out.printf("Offer price:%.2f",+sum*0.2);
+		double Discounted2=product1<product2?(product1<product3?product1:product3):(product2<product3?product2:product3);//ternary operator
+		System.out.println("\nDiscounted price after deducting the least product price:"+(sum-Discounted2));
+		System.out.println("\nOffer price:"+Discounted2);
+	}
+}
+

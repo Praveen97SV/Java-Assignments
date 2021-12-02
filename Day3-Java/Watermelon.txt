@@ -1,0 +1,29 @@
+package Day3;
+import java.util.Scanner;
+public class Watermelon {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);  
+		System.out.print("Enter Weight Of Watermelon: ");  
+		int WMweight=sc.nextInt();
+		int j=WMweight;
+		if(WMweight%2==0)
+		{
+			int equal=WMweight/2;
+			System.out.println("I get "+equal+"kgs and my sibling gets "+equal+"kgs");
+		}
+		else
+		{
+			System.out.println("Sorry, you cannot purchase");
+		}
+		for(int i=1;i<WMweight;i++)
+		{
+			System.out.println(" "+i+" "+--j);
+		}
+		System.out.println("Possible Combination is "+(WMweight-1));
+
+	}
+
+
+
+
+}
