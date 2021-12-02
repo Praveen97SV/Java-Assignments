@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class RunRate {
+	public static void main(String[]args){
+		Scanner Sc= new Scanner(System.in);
+		System.out.println("Enter Total number of overs");
+		int Overs=Sc.nextInt();
+		System.out.println("Enter Target Run");
+		int Runtarget=Sc.nextInt();
+		System.out.println("Enter over bowled");
+		int OverBowled=Sc.nextInt();
+		System.out.println("Enter Runs scored");
+		int Scored=Sc.nextInt();
+		float CurrentRunRate=Scored/OverBowled;
+		System.out.println("The Current RunRate is:"+CurrentRunRate);
+		float RequiredRunRate=(float)(Runtarget-Scored)/(float)(Overs-OverBowled);
+		System.out.println("Required RunRate is:"+RequiredRunRate);
+
+	}
+
+}
