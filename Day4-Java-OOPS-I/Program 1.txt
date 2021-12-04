@@ -1,0 +1,73 @@
+public class ItemType {
+    private String name;
+    private Double costPerDay;
+    private Double deposit;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Double getCostPerDay() {
+        return costPerDay;
+    }
+
+    public void setCostPerDay(Double costPerDay) {
+        this.costPerDay = costPerDay;
+    }
+
+    public Double getDeposit() {
+        return deposit;
+    }
+
+    public void setDeposit(Double deposit) {
+        this.deposit = deposit;
+    }
+
+    public void display() {
+        System.out.println("Item type details");
+        System.out.println("Name : " + name);
+        System.out.printf("CostPerDay :", costPerDay);
+        System.out.printf("Deposit : ", deposit);
+    }
+
+}
+
+
+
+
+
+(Main class)
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        ItemType itemType = null;
+
+        try (Scanner scanner = new Scanner(System.in)) {
+            itemType = new ItemType();
+
+            System.out.println("Enter the item type:");
+            itemType.setName(scanner.next());
+
+            System.out.println("Enter the cost per day:");
+            itemType.setCostPerDay(scanner.nextDouble());
+
+            System.out.println("Enter the deposit amount:");
+            itemType.setDeposit(scanner.nextDouble());
+
+            itemType.display();
+        } catch (InputMismatchException inputMismatchException) {
+            System.err.println("Error: Invalid input");
+        } catch (Exception exception) {
+            System.err.println("Error: An error occurred");
+        }
+    }
+
+}
